@@ -1,0 +1,28 @@
+{"steps":
+  [
+    {
+      "id": "1",
+      "function":  "get_Bridge_CountingPoint",
+      "dependency": null
+    },
+    {
+      "id": "2",
+      "function":  "get_BridgeCondition",
+      "dependency": "1"
+    },
+    {
+      "id": "3",
+      "function": "get_TrafficCounting",
+      "dependency": "1"
+    },
+    {
+      "id": "4",
+      "function":  "merge_BridgeCondition_TrafficCounting",
+      "dependency":
+        {
+          "data": ["2","3"],
+          "mapping" : "1"
+        }
+    }
+  ]
+}
