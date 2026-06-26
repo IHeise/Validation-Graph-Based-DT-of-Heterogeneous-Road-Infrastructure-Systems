@@ -12,7 +12,7 @@ def Mono_4_Querying_rev1(size):
         "get_TrafficCounting": "traffic.get_TrafficCounting_mono",
         "merge_BridgeCondition_TrafficCounting": "merging.merge_BridgeCondition_TrafficCounting"
     }
-    #sizes = [1,2,3,4,5]
+
     result = execute_query_plan(query_plan, function_map,databasename=size)
     print(len(result))
 
@@ -27,7 +27,7 @@ def Mono_3_Querying_rev1(size):
         "get_TrafficCounting": "traffic.get_TrafficCounting_red",
         "merge_BridgeCondition_TrafficCounting": "merging.merge_BridgeCondition_TrafficCounting"
     }
-    #sizes = [1,2,3,4,5]
+
     result = execute_query_plan(query_plan, function_map,databasename=size)
     print(len(result))
 
@@ -39,7 +39,7 @@ def Mono_3_Querying_all_in_one_rev1(size):
     function_map={
         "get_Bridge_CountingPoint": "all_in_one.get_Bridge_CountingPoint_red"
     }
-    #sizes = [1,2,3,4,5]
+
     result = execute_query_plan(query_plan, function_map,databasename=size)
     print(len(result))
 
@@ -51,6 +51,6 @@ def Mono_4_Querying_all_in_one_rev1(size):
     function_map={
         "get_Bridge_CountingPoint": "all_in_one.get_Bridge_CountingPoint_mono"
     }
-    #sizes = [1,2,3,4,5]
+ 
     result = execute_query_plan(query_plan, function_map,databasename=size)
     print(len(result))

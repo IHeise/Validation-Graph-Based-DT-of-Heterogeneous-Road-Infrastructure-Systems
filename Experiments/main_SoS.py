@@ -26,9 +26,9 @@ def SoS_4_Querying_rev1(size):
         "get_TrafficCounting": "traffic.get_TrafficCounting",
         "merge_BridgeCondition_TrafficCounting": "merging.merge_BridgeCondition_TrafficCounting"
     }
-    #sizes = [1,2,3,4,5]
+  
     result = execute_query_plan(query_plan, function_map,databasename=size)
-    #print(len(result))
+    
 
 
 

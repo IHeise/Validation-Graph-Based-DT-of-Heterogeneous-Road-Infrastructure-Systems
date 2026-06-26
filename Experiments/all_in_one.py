@@ -1,8 +1,7 @@
 from DBinteractions.GraphCreation import *
 def get_Bridge_CountingPoint_red(databasename):
-    #print("2 reached")
 
-    bridge = DBinteraction(database=f"mono-red-{databasename}")
+    red = DBinteraction(database=f"mono-red-{databasename}")
 
 
 
@@ -29,28 +28,8 @@ def get_Bridge_CountingPoint_red(databasename):
                 RETURN  traffic_data, bridge_data
                 
                 """
-    query = """MATCH
-    (ref:ReferenceElement)<-[:starts_at]-(l1:Localization)<-[:located_at]-(bridge:Bridge:RoadInfrastructureElement),
-    (ref)<-[:starts_at]-(l2:Localization)<-[:located_at]-(cp:CountingPoint:RoadInfrastructureElement)
 
-    WITH DISTINCT bridge, cp
-    
-    MATCH (bridge)<--(i:Inspection)
-    MATCH (cp)<--(t:TrafficCounting)
-    
-    RETURN
-        cp,
-        bridge,
-        collect(DISTINCT {
-            Year: t.Age,
-            Traffic: t.Traffic
-        }) AS traffic_data,
-        collect(DISTINCT {
-            Year: i.Age,
-            ConditionGrade: i.Condition_Grade
-        }) AS bridge_data
-                    """
-    results = bridge.send_query_(query=query)
+    results = red.send_query_(query=query)
 
     records = [dict(record) for record in results]
     print(len(records))
@@ -59,9 +38,9 @@ def get_Bridge_CountingPoint_red(databasename):
 
 
 def get_Bridge_CountingPoint_mono(databasename):
-    # print("2 reached")
 
-    bridge = DBinteraction(database=f"mono-red-{databasename}")
+
+    mono = DBinteraction(database=f"mono-complete-{databasename}")
 
     query = """MATCH (bridge:Bridge:RoadInfrastructureElement)-[loc1:located_at]->(l1:Localization)-[s1:starts_at]->(ref:ReferenceElement),
                 (cp:CountingPoint:RoadInfrastructureElement)-[loc2:located_at]->(l2:Localization)-[s2:starts_at]->(ref)
@@ -87,28 +66,8 @@ def get_Bridge_CountingPoint_mono(databasename):
 
 
                 """
-    query = """MATCH
-        (ref:ReferenceElement)<-[:starts_at]-(l1:Localization)<-[:located_at]-(bridge:Bridge:RoadInfrastructureElement),
-        (ref)<-[:starts_at]-(l2:Localization)<-[:located_at]-(cp:CountingPoint:RoadInfrastructureElement)
 
-        WITH DISTINCT bridge, cp
-
-        MATCH (bridge)<--(i:Inspection)
-        MATCH (cp)<--(t:TrafficCounting)
-
-        RETURN
-            cp,
-            bridge,
-            collect(DISTINCT {
-                Year: t.Age,
-                Traffic: t.Traffic
-            }) AS traffic_data,
-            collect(DISTINCT {
-                Year: i.Age,
-                ConditionGrade: i.Condition_Grade
-            }) AS bridge_data
-                        """
-    results = bridge.send_query_(query=query)
+    results = mono.send_query_(query=query)
 
     records = [dict(record) for record in results]
     print(len(records))
