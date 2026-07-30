@@ -1,0 +1,6 @@
+Constraint_Name,Constraint_Type,Constraint_Label,Constraint_Property
+Bridge,NODE_PROPERTY_UNIQUENESS,:Bridge,Bridge_ID
+BridgeComponent,NODE_PROPERTY_UNIQUENESS,:BridgeComponent,BridgeComponent_ID
+Damage,NODE_PROPERTY_UNIQUENESS,:Damage,Damage_ID
+DamageRecord,NODE_PROPERTY_UNIQUENESS,:DamageRecord,DamageRecord_ID
+Inspection,NODE_PROPERTY_UNIQUENESS,:Inspection,Inspection_ID

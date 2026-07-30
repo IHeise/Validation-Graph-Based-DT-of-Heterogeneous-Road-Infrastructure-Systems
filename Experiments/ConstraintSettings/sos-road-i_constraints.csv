@@ -1,0 +1,4 @@
+Constraint_Name,Constraint_Type,Constraint_Label,Constraint_Property
+RoadSection,NODE_PROPERTY_UNIQUENESS,:RoadSection,RoadSection_ID
+RoadComponent,NODE_PROPERTY_UNIQUENESS,:RoadComponent,RoadComponent_ID
+RoadCondition,NODE_PROPERTY_UNIQUENESS,:RoadCondition,RoadCondition_ID

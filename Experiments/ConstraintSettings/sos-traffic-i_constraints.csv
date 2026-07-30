@@ -1,0 +1,3 @@
+Constraint_Name,Constraint_Type,Constraint_Label,Constraint_Property
+CountingPoint,NODE_PROPERTY_UNIQUENESS,:CountingPoint,CountingPoint_ID
+TrafficCounting,NODE_PROPERTY_UNIQUENESS,:TrafficCounting,TrafficCounting_ID

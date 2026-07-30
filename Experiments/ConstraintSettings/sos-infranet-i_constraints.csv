@@ -1,0 +1,3 @@
+Constraint_Name,Constraint_Type,Constraint_Label,Constraint_Property
+ReferenceElement,NODE_PROPERTY_UNIQUENESS,:ReferenceElement,ReferenceElement_ID
+RoadInfrastructureElement,NODE_PROPERTY_UNIQUENESS,:RoadInfrastructureElement,RoadInfrastructureElement_ID
