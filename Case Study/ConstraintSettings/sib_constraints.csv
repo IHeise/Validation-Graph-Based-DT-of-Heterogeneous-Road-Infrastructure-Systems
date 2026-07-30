@@ -1,0 +1,5 @@
+Constraint_Name,Constraint_Type,Constraint_Label,Constraint_Property
+Asset,NODE_PROPERTY_UNIQUENESS,Asset,Asset_ID
+ComponentGroup,NODE_PROPERTY_UNIQUENESS,ComponentGroup,ComponentGroup_ID,Asset_ID
+Damage,NODE_PROPERTY_UNIQUENESS,Damage,Damage_ID,Asset_ID
+Inspection,NODE_PROPERTY_UNIQUENESS,Inspection,Inspection_ID
