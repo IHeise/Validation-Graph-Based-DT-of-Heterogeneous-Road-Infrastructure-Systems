@@ -2,7 +2,7 @@
 
 
 
-This directory contains the database constraint definitions used in the Case Study Setup.
+This directory contains the database constraint definitions used in the setup for the synthetic experiments.
 
 
 
@@ -10,9 +10,7 @@ This directory contains the database constraint definitions used in the Case Stu
 
 
 
-* sib\_constraints.csv
-* traffic\_constraints.csv
-* infranet\_constraints.csv
+* ...
 
 
 
